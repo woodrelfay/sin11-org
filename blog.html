@@ -31,6 +31,34 @@
   </div>
   <p style="margin-top:10px">© 2026 Sin11_Wong · 只发真实任务和数字</p>
 </div></footer>
-<script>function toggleTheme(){var h=document.documentElement;var n=h.getAttribute("data-theme")==="light"?"dark":"light";h.setAttribute("data-theme",n);try{localStorage.setItem("theme",n)}catch(e){}syncThemeBtn()}function syncThemeBtn(){var b=document.querySelector(".theme-toggle");if(!b)return;b.textContent=document.documentElement.getAttribute("data-theme")==="light"?"☾ 夜间":"☀ 日间"}document.addEventListener("DOMContentLoaded",syncThemeBtn);</script>
+<script>
+function toggleTheme(){var h=document.documentElement;var n=h.getAttribute("data-theme")==="light"?"dark":"light";h.setAttribute("data-theme",n);try{localStorage.setItem("theme",n)}catch(e){}syncThemeBtn()}
+function syncThemeBtn(){var b=document.querySelector(".theme-toggle");if(!b)return;b.textContent=document.documentElement.getAttribute("data-theme")==="light"?"\u263e \u591c\u95f4":"\u2600 \u65e5\u95f4"}
+document.addEventListener("DOMContentLoaded",function(){
+  syncThemeBtn();
+  var bar=document.createElement("div");bar.id="progress";document.body.appendChild(bar);
+  var top=document.createElement("button");top.id="toTop";top.setAttribute("aria-label","\u56de\u5230\u9876\u90e8");top.textContent="\u2191";document.body.appendChild(top);
+  top.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});
+  function onScroll(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?(h.scrollTop/max*100):0)+"%";top.classList.toggle("show",h.scrollTop>600)}
+  document.addEventListener("scroll",onScroll,{passive:true});onScroll();
+  var path=location.pathname;
+  document.querySelectorAll("nav a").forEach(function(a){
+    var href=a.getAttribute("href")||"";
+    if((path.indexOf("blog")>-1||path.indexOf("posts")>-1)&&href.indexOf("blog")>-1)a.classList.add("active");
+    if(path.indexOf("blog")===-1&&path.indexOf("posts")===-1&&(href==="index.html"||href==="/"||href==="../index.html"))a.classList.add("active");
+  });
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.08});
+    document.querySelectorAll(".card,.fact,.stat,article,.profile-card").forEach(function(el){el.classList.add("reveal");io.observe(el)});
+    var navMap={};
+    document.querySelectorAll("nav a").forEach(function(a){var href=a.getAttribute("href")||"";if(href.charAt(0)==="#")navMap[href.slice(1)]=a});
+    var sio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){Object.keys(navMap).forEach(function(k){navMap[k].classList.remove("active")});if(navMap[e.target.id])navMap[e.target.id].classList.add("active")}})},{rootMargin:"-38% 0px -55% 0px"});
+    ["works","records"].forEach(function(id){var s=document.getElementById(id);if(s)sio.observe(s)});
+  }
+  document.querySelectorAll(".card").forEach(function(c){
+    c.addEventListener("mousemove",function(e){var r=c.getBoundingClientRect();c.style.setProperty("--mx",((e.clientX-r.left)/r.width*100)+"%");c.style.setProperty("--my",((e.clientY-r.top)/r.height*100)+"%")});
+  });
+});
+</script>
 </body>
 </html>

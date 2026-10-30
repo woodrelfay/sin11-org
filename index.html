@@ -16,6 +16,8 @@
 
 <div class="wrap">
   <div class="hero">
+   <div class="hero-grid">
+    <div class="hero-main">
     <div class="eyebrow"><span class="dot"></span>SIN11.ORG · 个人网站</div>
     <h1>Sin11_Wong <span class="grad">是谁</span></h1>
     <p class="lead">Sin11_Wong 是企业自媒体运营，日常工作是为企业运营公众号矩阵与 GEO（生成式引擎优化）内容体系；业余在 X（推特）上做 AI 工具实测，只发真实任务和真实数字，同时写美股数据帖与灵活用工行业观察。sin11.org 是他的个人网站。</p>
@@ -25,6 +27,20 @@
       <div class="pillar"><b>灵活用工观察</b> · 企业端视角</div>
       <div class="pillar"><b>GEO 测评</b> · 方法公开 复测公开</div>
     </div>
+    </div>
+    <aside class="profile-card">
+      <div class="pc-head">
+        <div class="avatar">S</div>
+        <div><div class="pc-name">Sin11_Wong</div><div class="pc-role">企业自媒体运营</div></div>
+      </div>
+      <div class="pc-rows">
+        <div class="pc-row"><span>X</span><a href="https://x.com/Sin11_Wong">@Sin11_Wong</a></div>
+        <div class="pc-row"><span>GitHub</span><a href="https://github.com/woodrelfay">woodrelfay</a></div>
+        <div class="pc-row"><span>主力工具</span><b>Muse</b></div>
+        <div class="pc-row"><span>状态</span><b class="pc-live"><i></i>持续实测中</b></div>
+      </div>
+    </aside>
+   </div>
     <div class="stats">
       <div class="stat"><div class="n">3,813</div><div class="t">X 粉丝 · 2026-10-30</div></div>
       <div class="stat"><div class="n"><em>0/12</em></div><div class="t">GEO 首测有效提及 · 起点</div></div>
@@ -34,6 +50,7 @@
   </div>
 
   <section>
+    <div class="sec-label">01 · PROFILE</div>
     <h2>基本信息</h2>
     <div class="facts">
       <div class="fact"><div class="k">身份</div><div class="v">企业自媒体运营</div></div>
@@ -44,16 +61,18 @@
   </section>
 
   <section id="works">
+    <div class="sec-label">02 · WORKS</div>
     <h2>代表作</h2>
-    <div class="card"><h3><a href="posts/diagnosis.html">拿自己的 X 账号做了一次完整诊断</a></h3>
+    <div class="card work"><span class="idx">01</span><h3><a href="posts/diagnosis.html">拿自己的 X 账号做了一次完整诊断</a></h3>
     <p>3,743 个粉丝里互关占大头、关注比 91%、内容帖浏览只有交友帖的零头——一份不留情面的账号诊断与整改记录。</p></div>
-    <div class="card"><h3><a href="posts/geo-test.html">GEO 可见度实测：四个 AI 引擎都不认识我</a></h3>
+    <div class="card work"><span class="idx">02</span><h3><a href="posts/geo-test.html">GEO 可见度实测：四个 AI 引擎都不认识我</a></h3>
     <p>用 12 道题在秘塔、DeepSeek、豆包、Kimi 上实测个人品牌的 AI 提及率，结果 0/12；测评方法全公开：一题一新对话，避免上下文污染。</p></div>
-    <div class="card"><h3>开源小工具（GitHub）</h3>
+    <div class="card work"><span class="idx">03</span><h3>开源小工具（GitHub）</h3>
     <p><a href="https://github.com/woodrelfay/fapiao-ledger">发票台账助手</a> · <a href="https://github.com/woodrelfay/cn-geo-check">CN-GEO 自测包生成器</a> · <a href="https://github.com/woodrelfay/sub-leak-check">订阅漏钱体检</a>——都是本地运行、真实任务驱动的小工具。</p></div>
   </section>
 
   <section id="records">
+    <div class="sec-label">03 · RECORDS</div>
     <h2>实测记录（持续更新）</h2>
     <div class="card">
       <p style="color:var(--txt)"><b>2026-10-29 · GEO 首测</b><span class="tag">持续更新</span></p>
@@ -72,6 +91,34 @@
   </div>
   <p>© 2026 Sin11_Wong · 只发真实任务和数字</p>
 </div></footer>
-<script>function toggleTheme(){var h=document.documentElement;var n=h.getAttribute("data-theme")==="light"?"dark":"light";h.setAttribute("data-theme",n);try{localStorage.setItem("theme",n)}catch(e){}syncThemeBtn()}function syncThemeBtn(){var b=document.querySelector(".theme-toggle");if(!b)return;b.textContent=document.documentElement.getAttribute("data-theme")==="light"?"☾ 夜间":"☀ 日间"}document.addEventListener("DOMContentLoaded",syncThemeBtn);</script>
+<script>
+function toggleTheme(){var h=document.documentElement;var n=h.getAttribute("data-theme")==="light"?"dark":"light";h.setAttribute("data-theme",n);try{localStorage.setItem("theme",n)}catch(e){}syncThemeBtn()}
+function syncThemeBtn(){var b=document.querySelector(".theme-toggle");if(!b)return;b.textContent=document.documentElement.getAttribute("data-theme")==="light"?"\u263e \u591c\u95f4":"\u2600 \u65e5\u95f4"}
+document.addEventListener("DOMContentLoaded",function(){
+  syncThemeBtn();
+  var bar=document.createElement("div");bar.id="progress";document.body.appendChild(bar);
+  var top=document.createElement("button");top.id="toTop";top.setAttribute("aria-label","\u56de\u5230\u9876\u90e8");top.textContent="\u2191";document.body.appendChild(top);
+  top.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});
+  function onScroll(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?(h.scrollTop/max*100):0)+"%";top.classList.toggle("show",h.scrollTop>600)}
+  document.addEventListener("scroll",onScroll,{passive:true});onScroll();
+  var path=location.pathname;
+  document.querySelectorAll("nav a").forEach(function(a){
+    var href=a.getAttribute("href")||"";
+    if((path.indexOf("blog")>-1||path.indexOf("posts")>-1)&&href.indexOf("blog")>-1)a.classList.add("active");
+    if(path.indexOf("blog")===-1&&path.indexOf("posts")===-1&&(href==="index.html"||href==="/"||href==="../index.html"))a.classList.add("active");
+  });
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.08});
+    document.querySelectorAll(".card,.fact,.stat,article,.profile-card").forEach(function(el){el.classList.add("reveal");io.observe(el)});
+    var navMap={};
+    document.querySelectorAll("nav a").forEach(function(a){var href=a.getAttribute("href")||"";if(href.charAt(0)==="#")navMap[href.slice(1)]=a});
+    var sio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){Object.keys(navMap).forEach(function(k){navMap[k].classList.remove("active")});if(navMap[e.target.id])navMap[e.target.id].classList.add("active")}})},{rootMargin:"-38% 0px -55% 0px"});
+    ["works","records"].forEach(function(id){var s=document.getElementById(id);if(s)sio.observe(s)});
+  }
+  document.querySelectorAll(".card").forEach(function(c){
+    c.addEventListener("mousemove",function(e){var r=c.getBoundingClientRect();c.style.setProperty("--mx",((e.clientX-r.left)/r.width*100)+"%");c.style.setProperty("--my",((e.clientY-r.top)/r.height*100)+"%")});
+  });
+});
+</script>
 </body>
 </html>
