@@ -6,11 +6,12 @@
 <title>博客 — Sin11_Wong</title>
 <meta name="description" content="Sin11_Wong 的博客：AI 工具实测、账号诊断、GEO 可见度测评与美股数据复盘，只报实测数字。">
 <link rel="stylesheet" href="style.css">
+<script>(function(){try{var t=localStorage.getItem("theme");if(!t){t=window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark"}document.documentElement.setAttribute("data-theme",t)}catch(e){document.documentElement.setAttribute("data-theme","dark")}})();</script>
 </head>
 <body>
 <header><div class="wrap">
   <div class="logo">Sin11<span>_Wong</span></div>
-  <nav><a href="index.html">首页</a><a href="blog.html">博客</a><a href="index.html#works">代表作</a><a href="index.html#records">实测记录</a></nav>
+  <nav><a href="index.html">首页</a><a href="blog.html">博客</a><a href="index.html#works">代表作</a><a href="index.html#records">实测记录</a></nav><button class="theme-toggle" onclick="toggleTheme()" aria-label="切换日间或夜间模式">☀ 日间</button>
 </div></header>
 <div class="wrap">
   <section style="padding-top:44px">
@@ -30,5 +31,6 @@
   </div>
   <p style="margin-top:10px">© 2026 Sin11_Wong · 只发真实任务和数字</p>
 </div></footer>
+<script>function toggleTheme(){var h=document.documentElement;var n=h.getAttribute("data-theme")==="light"?"dark":"light";h.setAttribute("data-theme",n);try{localStorage.setItem("theme",n)}catch(e){}syncThemeBtn()}function syncThemeBtn(){var b=document.querySelector(".theme-toggle");if(!b)return;b.textContent=document.documentElement.getAttribute("data-theme")==="light"?"☾ 夜间":"☀ 日间"}document.addEventListener("DOMContentLoaded",syncThemeBtn);</script>
 </body>
 </html>

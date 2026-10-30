@@ -6,11 +6,12 @@
 <title>拿自己的 X 账号做了一次完整诊断 — Sin11_Wong</title>
 <meta name="description" content="Sin11_Wong 对自己 X 账号的完整诊断：关注比 91%、粉丝池以互关为主、内容帖浏览远低于交友帖，以及整改方法。">
 <link rel="stylesheet" href="../style.css">
+<script>(function(){try{var t=localStorage.getItem("theme");if(!t){t=window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark"}document.documentElement.setAttribute("data-theme",t)}catch(e){document.documentElement.setAttribute("data-theme","dark")}})();</script>
 </head>
 <body>
 <header><div class="wrap">
   <div class="logo">Sin11<span>_Wong</span></div>
-  <nav><a href="../index.html">首页</a><a href="../blog.html">博客</a><a href="../index.html#works">代表作</a><a href="../index.html#records">实测记录</a></nav>
+  <nav><a href="../index.html">首页</a><a href="../blog.html">博客</a><a href="../index.html#works">代表作</a><a href="../index.html#records">实测记录</a></nav><button class="theme-toggle" onclick="toggleTheme()" aria-label="切换日间或夜间模式">☀ 日间</button>
 </div></header>
 <div class="wrap"><article>
   <h1>拿自己的 X 账号做了一次完整诊断</h1>
@@ -46,5 +47,6 @@
   </div>
   <p style="margin-top:10px">© 2026 Sin11_Wong · 只发真实任务和数字</p>
 </div></footer>
+<script>function toggleTheme(){var h=document.documentElement;var n=h.getAttribute("data-theme")==="light"?"dark":"light";h.setAttribute("data-theme",n);try{localStorage.setItem("theme",n)}catch(e){}syncThemeBtn()}function syncThemeBtn(){var b=document.querySelector(".theme-toggle");if(!b)return;b.textContent=document.documentElement.getAttribute("data-theme")==="light"?"☾ 夜间":"☀ 日间"}document.addEventListener("DOMContentLoaded",syncThemeBtn);</script>
 </body>
 </html>
