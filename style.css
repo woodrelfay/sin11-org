@@ -9,6 +9,7 @@ header .wrap{display:flex;justify-content:space-between;align-items:center}
 .logo{font-size:20px;font-weight:700;color:var(--txt)}
 .logo span{color:var(--blue)}
 nav a{color:var(--sub);margin-left:22px;font-size:15px}
+@media (max-width:560px){header .wrap{flex-wrap:wrap;gap:8px}nav a{margin-left:0;margin-right:16px;font-size:14px;white-space:nowrap}.logo{font-size:19px}}
 nav a:hover{color:var(--txt);text-decoration:none}
 .hero{padding:56px 0 30px}
 .hero h1{font-size:38px;line-height:1.35;margin-bottom:18px}
