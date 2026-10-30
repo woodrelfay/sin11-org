@@ -1,0 +1,41 @@
+:root{--bg:#0b111d;--card:#131c2e;--line:#26334d;--txt:#eef2f8;--sub:#9fb0c9;--blue:#5ea3f7;--green:#5ed19a;--amber:#f5be50}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--txt);font-family:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;line-height:1.75}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--line);padding:18px 0}
+header .wrap{display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:20px;font-weight:700;color:var(--txt)}
+.logo span{color:var(--blue)}
+nav a{color:var(--sub);margin-left:22px;font-size:15px}
+nav a:hover{color:var(--txt);text-decoration:none}
+.hero{padding:56px 0 30px}
+.hero h1{font-size:38px;line-height:1.35;margin-bottom:18px}
+.hero p.lead{font-size:18px;color:var(--sub);max-width:700px}
+.pillars{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 6px}
+.pillar{border:1px solid var(--line);border-radius:999px;padding:6px 16px;font-size:14px;color:var(--sub)}
+.pillar b{color:var(--txt);font-weight:600}
+section{padding:30px 0 6px}
+h2{font-size:22px;margin-bottom:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.card h3{font-size:17px;margin-bottom:6px}
+.card p{color:var(--sub);font-size:15px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.fact .k{color:var(--sub);font-size:13px}
+.fact .v{font-size:16px;margin-top:2px}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{border:1px solid var(--line);padding:9px 12px;text-align:left}
+th{background:var(--card);color:var(--sub);font-weight:600}
+.zero{color:var(--amber);font-weight:700}
+article{padding:40px 0 10px}
+article h1{font-size:30px;line-height:1.45;margin-bottom:10px}
+.meta{color:var(--sub);font-size:14px;margin-bottom:26px}
+article p{margin-bottom:16px;font-size:16.5px}
+article h2{margin-top:30px}
+article ul{margin:0 0 16px 22px}
+article li{margin-bottom:8px}
+footer{border-top:1px solid var(--line);margin-top:50px;padding:26px 0 40px;color:var(--sub);font-size:14px}
+footer a{margin-right:18px}
+.note{color:var(--sub);font-size:14px}
